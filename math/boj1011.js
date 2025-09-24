@@ -5,8 +5,8 @@
 const solution = (dist) => {
 	const d = dist[1] - dist[0];
 
-	if (d === Math.sqrt(d)) {
-		// 거리 차이가 제곱수일 경우
+	if (Math.sqrt(d) % 1 === 0) {
+		// 거리 차이가 제곱수일 경우 기존 조건 d === Math.sqrt(d) => always false 수정
 		console.log(Math.sqrt(d) * 2 - 1);
 	} else {
 		const max = Math.floor(Math.sqrt(d)); // 최대 제곱수 값
@@ -45,6 +45,4 @@ const solution = (dist) => {
  * 1 2 3 3 2 2 1 로 나타내는게 최소 이동거리로 보는거임
  */
 
-solution([0, 3]);
-solution([1, 5]);
-solution([45, 50]);
+solution([0, 4]);
